@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>{{ product.name }}</title></head>
+<body>
+<a href="/">← Back</a>
+<h1>{{ product.name }}</h1>
+<p>{{ product.description }}</p>
+<h2>Reviews</h2>
+<ul id="reviews">
+{% for r in product.reviews %}
+    <li>{{ r.text }}</li>
+{% else %}
+    <li>No reviews yet</li>
+{% endfor %}
+</ul>
+
+<h3>Add review</h3>
+<form method="post" action="/product/{{ product.id }}/reviews">
+    <input type="text" name="review" placeholder="Write a short review" required>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

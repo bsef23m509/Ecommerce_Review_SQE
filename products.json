@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 1200,
+    "description": "A fast laptop",
+    "reviews": []
+  },
+  {
+    "id": 2,
+    "name": "Headphones",
+    "price": 150,
+    "description": "Noise-cancelling",
+    "reviews": []
+  },
+  {
+    "id": 3,
+    "name": "Smartphone",
+    "price": 799,
+    "description": "Android device",
+    "reviews": []
+  }
+]

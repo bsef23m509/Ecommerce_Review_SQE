@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Products</title></head>
+<body>
+<h1>Products</h1>
+<ul>
+{% for p in products %}
+    <li><a href="/product/{{ p.id }}">{{ p.name }}</a> — {{ p.description }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
