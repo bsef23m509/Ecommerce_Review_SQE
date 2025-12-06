@@ -17,6 +17,7 @@
 **Run tests**
 - Unit tests: `pytest tests/test_api.py -q`
 - Selenium UI test (requires Chrome + chromedriver available in PATH): `pytest tests/test_ui_selenium.py -q`
+- Run all with report: `PYTHONPATH=$(pwd) pytest -q --html=reports/report.html`
 
 **Notes**
 - Selenium test expects ChromeDriver compatible with your Chrome version in PATH.

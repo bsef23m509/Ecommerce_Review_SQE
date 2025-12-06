@@ -3,21 +3,98 @@
     "id": 1,
     "name": "Laptop",
     "price": 1200,
-    "description": "A fast laptop",
-    "reviews": []
+    "description": "High-performance laptop for work and gaming",
+    "reviews": [
+      {
+        "text": "good",
+        "rating": 3
+      },
+      {
+        "text": "Automated Selenium review",
+        "rating": 5
+      },
+      {
+        "text": "api testing",
+        "rating": 5
+      },
+      {
+        "text": "Automated Selenium review",
+        "rating": 5
+      },
+      {
+        "text": "Automated Selenium review",
+        "rating": 5
+      },
+      {
+        "text": "Automated Selenium review",
+        "rating": 5
+      },
+      {
+        "text": "Automated Selenium review",
+        "rating": 5
+      },
+      {
+        "text": "Automated Selenium review",
+        "rating": 5
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Headphones",
+    "name": "Noise-Cancelling Headphones",
     "price": 150,
-    "description": "Noise-cancelling",
-    "reviews": []
+    "description": "Over-ear headphones with active noise cancellation",
+    "reviews": [
+      {
+        "text": "great",
+        "rating": 4
+      },
+      {
+        "text": "great",
+        "rating": 4
+      }
+    ]
   },
   {
     "id": 3,
     "name": "Smartphone",
     "price": 799,
-    "description": "Android device",
+    "description": "Latest Android smartphone with high-resolution camera",
+    "reviews": []
+  },
+  {
+    "id": 4,
+    "name": "Wireless Mouse",
+    "price": 35,
+    "description": "Ergonomic wireless mouse with adjustable DPI",
+    "reviews": []
+  },
+  {
+    "id": 5,
+    "name": "Mechanical Keyboard",
+    "price": 120,
+    "description": "RGB backlit mechanical keyboard with tactile switches",
+    "reviews": []
+  },
+  {
+    "id": 6,
+    "name": "Smartwatch",
+    "price": 250,
+    "description": "Fitness smartwatch with heart rate monitor and GPS",
+    "reviews": []
+  },
+  {
+    "id": 7,
+    "name": "Portable Bluetooth Speaker",
+    "price": 80,
+    "description": "Compact speaker with deep bass and long battery life",
+    "reviews": []
+  },
+  {
+    "id": 8,
+    "name": "External SSD 1TB",
+    "price": 160,
+    "description": "Fast and portable external solid-state drive",
     "reviews": []
   }
 ]

@@ -60,6 +60,11 @@
               "key": "review",
               "value": "Nice product",
               "type": "text"
+            },
+            {
+              "key": "rating",
+              "value": "5",
+              "type": "text"
             }
           ]
         },
