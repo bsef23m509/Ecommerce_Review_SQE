@@ -1,15 +1,53 @@
-name: Run pytest
+name: Run Tests + HTML Report
+
 on: [push, pull_request]
+
 jobs:
   tests:
     runs-on: ubuntu-latest
+
     steps:
+      # 1. Checkout code
       - uses: actions/checkout@v4
+
+      # 2. Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.13'
+
+      # 3. Create venv & install dependencies
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 4. Start FastAPI server in background
+      - name: Start FastAPI server
+        run: |
+          source .venv/bin/activate
+          uvicorn app.main:app --port 8000 --host 127.0.0.1 &
+          echo $! > app.pid
+          sleep 2  # give server time to start
+
+      # 5. Run tests with HTML report
       - name: Run pytest
-        run: PYTHONPATH=$(pwd) pytest -q
+        run: |
+          source .venv/bin/activate
+          mkdir -p test_reports
+          PYTHONPATH=$(pwd) pytest -q --html=test_reports/report.html
+
+      # 6. Stop FastAPI server
+      - name: Stop server
+        if: always()   # ensure server is killed even if tests fail
+        run: |
+          kill $(cat app.pid)
+
+      # 7. Upload test report artifact
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-report
+          path: test_reports/report.html
